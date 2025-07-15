@@ -1,10 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Login from "./components/Login";
 
 function Main() {
   return (
     <>
-      <h1>Hello World</h1>
+      <Login />
     </>
   );
 }
