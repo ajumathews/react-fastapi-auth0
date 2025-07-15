@@ -21,15 +21,8 @@ token_auth_scheme = HTTPBearer()
 
 @app.get("/public")
 def public():
-    return {"status": "public"}
+    return {"message": "public"}
 
 @app.get("/protected")
-def private(response: Response, token:str = Depends(token_auth_scheme)):
-    
-    result = VerifyToken(token.credentials).verify()
-
-    if(result.get("status")):
-      response.status_code = status.HTTP_400_BAD_REQUEST
-      return result
-
-    return {"message": "private"}
+def private():
+    return {"message": "protected"}

@@ -9,7 +9,7 @@ function Protected() {
       const response = await Axios.get("/protected");
       if (response.data) {
         console.log(response.data);
-        setResponseFromApi(response.data.status);
+        setResponseFromApi(response.data.message);
       }
     }
     fetchData();

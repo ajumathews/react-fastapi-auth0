@@ -9,7 +9,7 @@ function Public() {
       const response = await Axios.get("/public");
       if (response.data) {
         console.log(response.data);
-        setResponseFromApi(response.data.status);
+        setResponseFromApi(response.data.message);
       }
     }
     fetchData();
