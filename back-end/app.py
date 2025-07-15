@@ -23,7 +23,7 @@ token_auth_scheme = HTTPBearer()
 def public():
     return {"status": "public"}
 
-@app.get("/private")
+@app.get("/protected")
 def private(response: Response, token:str = Depends(token_auth_scheme)):
     
     result = VerifyToken(token.credentials).verify()

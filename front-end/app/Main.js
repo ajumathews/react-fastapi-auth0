@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./css/styles.css";
 import Axios from "axios";
 import Public from "./components/Public";
-import Private from "./components/Private";
+import Protected from "./components/Protected";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -15,7 +15,7 @@ function Main() {
       <Routes>
         <Route path="/" element={<Public />} />
         <Route path="/public" element={<Public />} />
-        <Route path="/private" element={<Private />} />
+        <Route path="/protected" element={<Protected />} />
       </Routes>
     </BrowserRouter>
   );

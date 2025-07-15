@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Axios from "axios";
 
-function Private() {
+function Protected() {
   const [responseFromApi, setResponseFromApi] = useState();
 
   useEffect(() => {
     async function fetchData() {
-      const response = await Axios.get("/public");
+      const response = await Axios.get("/protected");
       if (response.data) {
         console.log(response.data);
         setResponseFromApi(response.data.status);
@@ -18,4 +18,4 @@ function Private() {
   return <div className="container">{responseFromApi}</div>;
 }
 
-export default Private;
+export default Protected;
