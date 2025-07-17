@@ -8,7 +8,14 @@ const clientId = "oVakBTdjIpBH7T1ltoEgY9IKjJWk0Lr9";
 
 function Main() {
   return (
-    <Auth0Provider domain={domain} clientId={clientId} redirectUri={window.location.origin} audience="http://localhost:8000">
+    <Auth0Provider
+      domain={domain}
+      clientId={clientId}
+      authorizationParams={{
+        redirect_uri: window.location.origin,
+        audience: "http://localhost:8000"
+      }}
+    >
       <Home />
     </Auth0Provider>
   );

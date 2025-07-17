@@ -19,7 +19,7 @@ function Profile() {
           });
           if (response.data) {
             console.log(response.data);
-            setChangeHistory(response.data);
+            setChangeHistory(response.data.message);
           } else {
             console.log("error fetching data from Api");
           }
