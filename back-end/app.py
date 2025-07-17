@@ -3,7 +3,6 @@
 from fastapi import Depends, FastAPI, Response, status
 from fastapi.security import HTTPBearer
 from fastapi.middleware.cors import CORSMiddleware
-from utils import VerifyToken
 
 
 app = FastAPI()
