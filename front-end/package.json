@@ -1,5 +1,5 @@
 {
-  "name": "front-end",
+  "name": "react-auth0",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -11,22 +11,17 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@auth0/auth0-react": "^2.3.0",
     "@babel/core": "^7.28.0",
     "@babel/preset-env": "^7.28.0",
     "@babel/preset-react": "^7.27.1",
     "axios": "^1.10.0",
     "babel-loader": "^10.0.0",
-    "immer": "^10.1.1",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-router-dom": "^7.6.3",
-    "use-immer": "^0.11.0",
     "webpack": "^5.99.9",
     "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.2"
-  },
-  "devDependencies": {
-    "css-loader": "^7.1.2",
-    "style-loader": "^4.0.0"
   }
 }

@@ -3,7 +3,7 @@
 from fastapi import Depends, FastAPI, Response, status
 from fastapi.security import HTTPBearer
 from fastapi.middleware.cors import CORSMiddleware
-
+from auth import verify_token
 
 app = FastAPI()
 
@@ -18,10 +18,6 @@ app.add_middleware(
 
 token_auth_scheme = HTTPBearer()
 
-@app.get("/public")
-def public():
-    return {"message": "public"}
-
 @app.get("/protected")
-def private():
-    return {"message": "protected"}
+def protected(user=Depends(verify_token)):
+    return {"message": "protected", "user": user}
