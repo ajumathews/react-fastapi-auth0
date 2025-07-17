@@ -8,7 +8,7 @@ const clientId = "oVakBTdjIpBH7T1ltoEgY9IKjJWk0Lr9";
 
 function Main() {
   return (
-    <Auth0Provider domain={domain} clientId={clientId} redirectUri={window.location.origin}>
+    <Auth0Provider domain={domain} clientId={clientId} redirectUri={window.location.origin} audience="http://localhost:8000">
       <Home />
     </Auth0Provider>
   );
