@@ -4,7 +4,7 @@ import { Auth0Provider } from "@auth0/auth0-react";
 import Home from "./Home";
 
 const domain = "dev-etn3wquyukbbmijk.us.auth0.com";
-const clientId = "oVakBTdjIpBH7T1ltoEgY9IKjJWk0Lr9";
+const clientId = "your client id";
 
 function Main() {
   return (
